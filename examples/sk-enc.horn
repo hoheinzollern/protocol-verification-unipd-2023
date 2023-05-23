@@ -1,0 +1,11 @@
+fun senc/2.
+fun sdec/2.
+
+query attacker:s[].
+
+reduc
+
+attacker:x & attacker:y -> attacker:senc(x,y);
+attacker:senc(x,y) & attacker:y -> attacker:x;
+attacker:k[];
+attacker:senc(s[], k[]).
